@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://kit.fontawesome.com/53d789aa8b.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <!-- ################# NAVBAR  ################ -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">KK2311</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ml-auto">
+        <a class="nav-link mx-3" id="home" href="index.html">Home</a>
+        <!-- <a class="nav-link  mx-3" id="aboutt" href="#aboutme">About me </a> -->
+        <a class="nav-link  mx-3" id="skills" href="skills.html">Skills </a>
+        <a class="nav-link  mx-3" id="projects" href="projects.html">Projects</a>
+        <a class="nav-link active" id="contact" href="contact.html" tabindex="-1" aria-disabled="true">Contact</a>
+
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ###################### Contact form #################### -->
+
+
+
+  <!-- ###########################3 -->
+  <!-- 
+  <form class="x needs-validation" id="form" novalidate>
+    <div class="container">
+      
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">First Name</label>
+    <input type="text" class="form-control has-validation" id="fname" placeholder="abc" required>
+
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Last Name</label>
+    <input type="text" class="form-control has-validation" id="lname" placeholder="abc" required>
+
+  </div>
+  <div class="form-group my-1 ">
+    <label for="exampleFormControlInput1">Email address</label>
+    <input type="email" class="form-control has-validation" id="email" placeholder="name@example.com" required>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Message or Suggestions</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" id="message" rows="3"></textarea>
+  </div>
+  <button type="button" id="submit" class="btn btn-outline-dark">Submit</button>
+  </form> -->
+
+  <div class="wrapper ">
+    <div class="row ccbox no-gutters">
+      <div class="col-lg-5 details">
+        <div class="card a">
+          <div class="card-body">
+            <h3 class="card-title">Have You Any Question? Please Drop a Message
+            </h3>
+            <p class="card-text">Get in touch and let me know how i can help. Fill out the form and i’ll be in touch as
+              soon as possible.
+            </p>
+            <div class="ccc container-fluid no-gutters">
+              <div class="address">
+                <i class="fa fa-solid fa-house-user fa-2x"></i>
+                <h5 class="b">Address</h5>
+              </div>
+              <p class="c">Lorem, ipsum dolor.</p>
+              <div class="phone">
+                <i class="fa fa-solid fa-phone fa-2x"></i>
+                <h5 class="b">Phone</h5>
+              </div>
+              <p class="c">+91 1234567890</p>
+              <div class="email">
+                <i class="fa fa-solid fa-envelope fa-2x"></i>
+                <h5 class="b">Email</h5>
+              </div>
+              <p class="c">info@keyur.com</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5 contactme">
+        <div class="card a">
+          <div class="card-body">
+            <form class="no-gutters" id="form" novalidate></form>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">First Name</label>
+              <input type="text" class="form-control has-validation" id="fname" placeholder="abc" required>
+
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Last Name</label>
+              <input type="text" class="form-control has-validation" id="lname" placeholder="abc" required>
+
+            </div>
+            <div class="form-group my-1 ">
+              <label for="exampleFormControlInput1">Email address</label>
+              <input type="email" class="form-control has-validation" id="email" placeholder="name@example.com"
+                required>
+            </div>
+
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Message or Suggestions</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" id="message" rows="2"></textarea>
+            </div>
+            <button type="button" id="submit" class="btn btn-outline-dark">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+
+
+
+
+
+
+
+
+<script>
+
+
+  let email = document.getElementById('email');
+  let fname = document.getElementById('fname');
+  let lname = document.getElementById('lname');
+
+  let ok1 = 0, ok2 = 0, ok3 = 0;
+
+  email.addEventListener('blur', () => {
+
+    let regex = /^([_a-zA-Z0-9]+)@([_a-zA-Z0-9]+)\.([a-zA-Z]){2,7}/;
+    let str = email.value;
+    if (regex.test(str)) {
+      console.log("email ok");
+      ok1 = true;
+    }
+    else ok1 = false;
+
+  })
+
+  fname.addEventListener('blur', () => {
+    let regex = /^[a-z ,.'-]+$/i;
+    let str = fname.value;
+    if (regex.test(str)) {
+      console.log("fname ok");
+      ok2 = true;
+    }
+    else ok2 = false;
+  })
+
+
+  lname.addEventListener('blur', () => {
+    let regex = /^[a-z ,.'-]+$/i;
+    let str = lname.value;
+    if (regex.test(str)) {
+      console.log("lname ok");
+      ok3 = true;
+    }
+    else ok3 = false;
+  })
+
+  document.getElementById("submit").addEventListener("click", () => {
+    if (ok1 && ok2 && ok3) {
+      alert("Your form has been submitted");
+    }
+    else
+      alert("Invalid details")
+
+  })
+
+
+
+
+
+
+</script>
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+  integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+  integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
